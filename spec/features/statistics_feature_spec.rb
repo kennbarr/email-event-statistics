@@ -20,11 +20,11 @@ feature 'Can view email statistics' do
   end
 
   scenario 'should display open rate of Order emails' do
-    within('#Order-stats') { expect(page).to have_content 'Open rate: 50%' }
+    within('#Order-open-rate') { expect(page).to have_content '50%' }
   end
 
   scenario 'should display click rate of Order emails' do
-    within('#Order-stats') { expect(page).to have_content 'Click rate: 50%' }
+    within('#Order-click-rate') { expect(page).to have_content '50%' }
   end
 
 end

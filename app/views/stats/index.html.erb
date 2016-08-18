@@ -6,12 +6,17 @@ Opened: <%= @total_stats[:opened] %><br>
 Clicks: <%= @total_stats[:clicked] %>
 
 <h2>Rates</h2>
-<ul>
+<table>
+  <tr>
+    <th>Email Type</th>
+    <th>Open Rate</th>
+    <th>Click Rate</th>
+  </tr>
   <% @rate_stats.each do |type, rates| %>
-    <li id="<%= type %>-stats">
-      <h3><%= type %></h3>
-      Open rate: <%= (rates[:opened]*100).to_i %>%<br>
-      Click rate: <%= (rates[:clicked]*100).to_i %>%
-    </li>
+    <tr id="<%= type %>-stats">
+      <td><%= type %></td>
+      <td id="<%= type %>-open-rate"><%= (rates[:opened]*100).to_i %>%</td>
+      <td id="<%= type %>-click-rate"><%= (rates[:clicked]*100).to_i %>%</td>
+    </tr>
   <% end %>
 </ul>
