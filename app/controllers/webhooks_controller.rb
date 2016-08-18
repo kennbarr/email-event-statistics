@@ -1,11 +1,12 @@
 class WebhooksController < ApplicationController
 
-  def create(data = JSON.parse(request.body.read))
+  def create
+    data = JSON.parse(request.body.read)
     Event.create(address: data["Address"],
                  email_type: data["EmailType"],
                  event: data["Event"],
                  timestamp: data["Timestamp"])
-    head :ok unless ENV['RAILS_ENV'] == 'test'
+    head :ok
   end
 
 end
