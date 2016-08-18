@@ -1,7 +1,7 @@
 require_relative '../../app/controllers/webhooks_controller'
 require 'rails_helper'
 
-describe WebhooksController, :type => :request do
+describe WebhooksController do
   test_event = { "Address":"barney@lostmy.name",
                  "EmailType":"Shipment",
                  "Event":"send",

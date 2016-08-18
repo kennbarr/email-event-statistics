@@ -1,6 +1,6 @@
 1:
   address: bob@bob.com
-  email_type: Shipment
+  email_type: Order
   event: send
   timestamp: 1432820696
 
@@ -12,13 +12,13 @@
 
 3:
   address: bob@bob.com
-  email_type: UserConfirmation
+  email_type: Shipment
   event: send
   timestamp: 1432820698
 
 4:
   address: bob@bob.com
-  email_type: ReferAFriend
+  email_type: Order
   event: open
   timestamp: 1432820699
 

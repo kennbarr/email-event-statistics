@@ -1,6 +1,17 @@
 <h1>Email Statistics</h1>
 
 <h2>Total Stats</h2>
-Sent: <%= Event.where(event: "send").count %>
-Opened: <%= Event.where(event: "open").count %>
-Clicks: <%= Event.where(event: "click").count %>
+Sent: <%= @total_stats[:sent] %><br>
+Opened: <%= @total_stats[:opened] %><br>
+Clicks: <%= @total_stats[:clicked] %>
+
+<h2>Rates</h2>
+<ul>
+  <% @rate_stats.each do |type, rates| %>
+    <li id="<%= type %>-stats">
+      <h3><%= type %></h3>
+      Open rate: <%= (rates[:opened]*100).to_i %>%<br>
+      Click rate: <%= (rates[:clicked]*100).to_i %>%
+    </li>
+  <% end %>
+</ul>
