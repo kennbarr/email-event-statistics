@@ -1,1 +1,6 @@
-Statistics
+<h1>Email Statistics</h1>
+
+<h2>Total Stats</h2>
+Sent: <%= Event.where(event: "send").count %>
+Opened: <%= Event.where(event: "open").count %>
+Clicks: <%= Event.where(event: "click").count %>

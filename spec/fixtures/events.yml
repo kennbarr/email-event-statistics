@@ -1,0 +1,35 @@
+1:
+  address: bob@bob.com
+  email_type: Shipment
+  event: send
+  timestamp: 1432820696
+
+2:
+  address: bob@bob.com
+  email_type: Order
+  event: send
+  timestamp: 1432820697
+
+3:
+  address: bob@bob.com
+  email_type: UserConfirmation
+  event: send
+  timestamp: 1432820698
+
+4:
+  address: bob@bob.com
+  email_type: ReferAFriend
+  event: open
+  timestamp: 1432820699
+
+5:
+  address: bob@bob.com
+  email_type: GetABookDiscount
+  event: open
+  timestamp: 1432820700
+
+6:
+  address: bob@bob.com
+  email_type: Order
+  event: click
+  timestamp: 1432820701
